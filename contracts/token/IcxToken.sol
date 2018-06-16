@@ -19,7 +19,7 @@ contract IcxToken is ERC20, Lockable {
     event TokenTransfer();
 
     modifier onlyFromWallet {
-        require(msg.sender != walletAddress);
+        require(msg.sender == walletAddress);
         _;
     }
 
